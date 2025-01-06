@@ -1,13 +1,18 @@
 import Header from "./components/Header"
-import Blog from "./components/Blogs/Blogs"
+import Blogs from "./components/Blogs/Blogs"
+import Bookmarks from "./components/Bookmarks/Bookmarks"
 
 function App() {
 
   return (
-    <>
+    <div className="container mx-auto px-5">
       <Header/>
-      <Blog/>
-    </>
+      <div className="md:flex">
+        <Blogs/>
+        <Bookmarks/>
+
+      </div>
+    </div>
   )
 }
 
