@@ -1,10 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@100..900&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
-body{
+body {
   font-family: "Exo 2", serif;
+}
+.parent-scrollbar {
+  overflow: auto;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+.blogs::-webkit-scrollbar {
+  background-color: transparent;
+  width: 5px;
+}
+.blogs::-webkit-scrollbar-thumb {
+  background-color: #f3f3f3;
+  
 }

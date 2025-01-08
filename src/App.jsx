@@ -20,9 +20,9 @@ function App() {
     setBookmarkItems(remainingBookmarkItem);
   };
   return (
-    <div className="max-w-[1280px] mx-auto px-5">
+    <div className="max-w-[1280px] mx-auto px-5 parent-scrollbar">
       <Header />
-      <div className="md:flex">
+      <div className="md:flex py-4">
         <Blogs
           handleBookmarks={handleBookmarks}
           handleSpentTime={handleSpentTime}

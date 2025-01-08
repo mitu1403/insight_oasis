@@ -2,7 +2,7 @@ import SpentTime from "../SpentTime/SpentTime";
 
 function Bookmarks({ bookmarkItems, spentTime }) {
   return (
-    <div className="md:w-1/3 m-4 flex flex-col space-y-5">
+    <div className="md:w-1/3 ps-6 flex flex-col space-y-5">
       <SpentTime spentTime={spentTime} />
       <div className="bg-[rgba(17,17,17,.05)]">
         <p className="font-bold text-2xl leading-loose px-5 py-4">

@@ -11,7 +11,7 @@ function Blogs({ handleBookmarks, handleSpentTime }) {
   }, []);
   console.log(blogs);
   return (
-    <div className="md:w-2/3 p-4">
+    <div className="md:w-2/3 pe-5 h-[100vh] overflow-y-scroll blogs">
       {blogs.map((item) => (
         <Blog
           key={item.id}
