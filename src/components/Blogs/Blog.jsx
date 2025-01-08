@@ -36,7 +36,7 @@ function Blog({ blog, handleBookmarks, handleSpentTime }) {
         </a>
       ))}
       <button
-        onClick={() => handleSpentTime(reading_time)}
+        onClick={() => handleSpentTime(reading_time, blog)}
         className="underline block"
       >
         Mark as read

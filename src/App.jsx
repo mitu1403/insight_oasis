@@ -12,8 +12,12 @@ function App() {
       setBookmarkItems([...bookmarkItems, blog]);
     }
   };
-  const handleSpentTime = (time) => {
+  const handleSpentTime = (time, blog) => {
     setSpentTime((prev) => prev + time);
+    const remainingBookmarkItem = bookmarkItems.filter(
+      (item) => item.id != blog.id
+    );
+    setBookmarkItems(remainingBookmarkItem);
   };
   return (
     <div className="max-w-[1280px] mx-auto px-5">
