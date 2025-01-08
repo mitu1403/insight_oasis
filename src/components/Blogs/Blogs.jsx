@@ -9,7 +9,6 @@ function Blogs({ handleBookmarks, handleSpentTime }) {
       .then((response) => response.json())
       .then((data) => setBlogs(data));
   }, []);
-  console.log(blogs);
   return (
     <div className="md:w-2/3 pe-5 h-[100vh] overflow-y-scroll blogs">
       {blogs.map((item) => (
