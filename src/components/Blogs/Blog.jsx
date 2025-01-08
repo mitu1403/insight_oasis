@@ -1,5 +1,5 @@
 import { CiBookmark } from "react-icons/ci";
-function Blog({ blog, handleBookmarks }) {
+function Blog({ blog, handleBookmarks, handleSpentTime }) {
   const {
     cover,
     title,
@@ -24,7 +24,7 @@ function Blog({ blog, handleBookmarks }) {
         </div>
         <div className="flex gap-2 items-center">
           {reading_time} min read
-          <button onClick={()=> handleBookmarks(blog)}>
+          <button onClick={() => handleBookmarks(blog)}>
             <CiBookmark />
           </button>
         </div>
@@ -35,6 +35,12 @@ function Blog({ blog, handleBookmarks }) {
           {item}
         </a>
       ))}
+      <button
+        onClick={() => handleSpentTime(reading_time)}
+        className="underline block"
+      >
+        Mark as read
+      </button>
     </div>
   );
 }
