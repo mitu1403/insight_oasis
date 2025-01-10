@@ -2,8 +2,7 @@ import { useState } from "react";
 import Header from "./components/Header";
 import Blogs from "./components/Blogs/Blogs";
 import Bookmarks from "./components/Bookmarks/Bookmarks";
-// import { getStoredBookmark, addToLocalStorage } from "./Utils/localStorage";
-import { addToLocalStorage } from "./Utils/localStorage";
+import { removeFromLocalStorage,  addToLocalStorage } from "./Utils/localStorage";
 
 function App() {
   const [bookmarkItems, setBookmarkItems] = useState([]);
@@ -22,6 +21,7 @@ function App() {
       (item) => item.id != blog.id
     );
     setBookmarkItems(remainingBookmarkItem);
+    removeFromLocalStorage(blog.id, "bookmark");
   };
   return (
     <div className="max-w-[1280px] mx-auto px-5 parent-scrollbar">

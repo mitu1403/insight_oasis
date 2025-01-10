@@ -19,8 +19,7 @@ function Blogs({
   useEffect(() => {
     if (blogs.length > 0) {
       const bookmarkData = getStoredData("bookmark");
-      const spentTimeData = getStoredData("spentTime");
-      console.log(spentTimeData);
+      const spentTimeData = Number(getStoredData("spentTime"));
       const bookmarkItems = [];
       for (const item of bookmarkData) {
         const theItem = blogs.find((i) => i.id === item);

@@ -31,4 +31,10 @@ const addToLocalStorage = (id, itemName) => {
   }
 };
 
-export { getStoredData, addToLocalStorage, saveBookmarktoLocalStorage };
+const removeFromLocalStorage = (id) => {
+  const data = getStoredData("bookmark");
+  const remainingBookmarkItems = data.filter(item => item !== id)
+  saveBookmarktoLocalStorage(remainingBookmarkItems);
+};
+
+export { getStoredData, addToLocalStorage, saveBookmarktoLocalStorage, removeFromLocalStorage };
